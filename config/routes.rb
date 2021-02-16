@@ -14,9 +14,11 @@ Rails.application.routes.draw do
   get 'tasks/:id', to: 'tasks#show', as: :task
 
     # update
+    get 'tasks/:id/edit', to: 'tasks#edit'
 
     # submit form and update record for ONE
+    patch 'tasks/:id', to: 'tasks#update'
 
     # delete ONE record
-
+    delete 'tasks/:id', to: 'tasks#destroy'
 end
