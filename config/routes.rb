@@ -5,8 +5,8 @@ Rails.application.routes.draw do
   get 'tasks', to: 'tasks#index'
 
     # create ONE
-
     # submit form and create the new ONE
+    get "tasks/new", to: "tasks#new"
 
   # read ONE
   get 'tasks/:id', to: 'tasks#show', as: :task
