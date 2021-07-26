@@ -1,24 +1,24 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A task manager this allows a user to view a list of tasks and their details.
+The user may browse, add and remove tasks, as well as update them to completed or not.
 
-Things you may want to cover:
 
-* Ruby version
+* Ruby version:
+Ruby 2.6
 
-* System dependencies
+* System dependencies:
+rails 6.0
 
-* Configuration
+* Configuration:
+```bash
+bundle install
+```
 
-* Database creation
+* Database creation:
+Navigate to task-manager/db/seeds.rb to see the starter tasks
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Database initialization:
+```bash
+rails db:seed
+```
