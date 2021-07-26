@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get 'tasks', to: 'tasks#index'
 
     # create ONE
-    get 'tasks/new', to: 'tasks#new'
+    get 'tasks/new', to: 'tasks#new', as: :new_task
 
     # submit form and create the new ONE
     post 'tasks', to: 'tasks#create'
@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   get 'tasks/:id', to: 'tasks#show', as: :task
 
     # update
-    get 'tasks/:id/edit', to: 'tasks#edit'
+    get 'tasks/:id/edit', to: 'tasks#edit', as: :edit_task
 
     # submit form and update record for ONE
     patch 'tasks/:id', to: 'tasks#update'
