@@ -1,13 +1,9 @@
+<h1>New task ✏️</h1>
 <%= render "form", task: @task %>
 
-<!-- <form class="new_task" id="new_task" action="/tasks" accept-charset="UTF-8" method="post">
-  <input type="hidden" name="authenticity_token" value="fUrBymmVzFG49YTQE9xKfohttEtW7eHnui2WT6KWpRXT6g9dz73lhZ7bRdHH+RuV/TFoB23OG5l1eo731o8l6g==">
-  <label for="task_title">Title</label>
-  <input type="text" name="task[title]" id="task_title">
-  <label for="task_details">Details</label>
-  <input type="text" name="task[details]" id="task_details">
-  <label for="task_completed">Completed</label>
-  <input type="check_box" name="task[completed]" id="task_completed">
-  <input type="submit" name="commit" value="Create Task" data-disable-with="Create Task">
-</form>
- -->
+<hr>
+
+<%= link_to tasks_path do %>
+  <i class= "fa fa-history"></i> back to list
+<% end %>
+

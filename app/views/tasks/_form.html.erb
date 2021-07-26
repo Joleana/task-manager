@@ -1,12 +1,21 @@
 <%= form_for(@task) do |t| %>
-  <%= t.label :title %>
-  <%= t.text_field :title %>
+  <div class="form-group">
+    <%= t.label :title %>
+    <%= t.text_field :title, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= t.label :details %>
+    <%= t.text_area :details, class: 'form-control' %>
+  </div>
+  <% unless t.object.new_record? %>
+    <div class="checkbox">
+      <label>
+        <%= t.check_box :completed %> Completed
+      </label>
+    </div>
+  <% end %>
 
-  <%= t.label :details %>
-  <%= t.text_field :details %>
-
-  <%= t.label :completed %>
-  <%= t.check_box :completed %>
-
-  <%= t.submit %>
+  <%= t.submit class: 'btn btn-primary' %>
 <% end %>
+
+<!-- <form action="/tasks"></form> -->
